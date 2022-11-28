@@ -40,7 +40,7 @@ const { createApp } = Vue;
     createApp({
         data() {
             return {
-                // Inidice posizione immagine
+                // INDICE posizione immagine
                 activeImage: 0,
                 // prima proprietà
                 slides: {
@@ -52,6 +52,7 @@ const { createApp } = Vue;
                         'img/05.webp',
                     ],
                     // Seconda e terza proprietà
+                    
                 },
             }
 
@@ -59,11 +60,20 @@ const { createApp } = Vue;
         methods: {
             // metodo di navigazione immagine successiva
             nextImage() {
-                // Incrementa indice posizione
+                // Incrementa INDICE posizione
                 this.activeImage++;
                 // poi valuta se siamo oltre come indice allora torna alla prima posizione
-                if(this.activeImage > this.slides.images.lenght - 1){
+                if(this.activeImage > this.slides.images.length - 1){
                     this.activeImage = 0;
+                }
+            },
+
+            prevImage() {
+                // decremento INDICE posizione
+                this.activeImage--;
+                // Loop contrario a prima
+                if(this.activeImage < 0) {
+                    this.activeImage = this.slides.images.length -1;
                 }
             }
         }
