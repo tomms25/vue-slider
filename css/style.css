@@ -103,3 +103,26 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
+
+/* // Metodo navigazione immagini
+methods: {
+    // metodo di navigazione immagine successiva
+    nextImage() {
+        // Incrementa INDICE posizione
+        this.activeImage++;
+        // poi valuta se siamo oltre come indice allora torna alla prima posizione
+        if(this.activeImage > this.slides.images.length - 1){
+            this.activeImage = 0;
+        }
+    },
+
+    prevImage() {
+        // decremento INDICE posizione
+        this.activeImage--;
+        // Loop contrario a prima
+        if(this.activeImage < 0) {
+            this.activeImage = this.slides.images.length -1;
+        }
+    }
+} */
