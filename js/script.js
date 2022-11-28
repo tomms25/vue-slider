@@ -52,11 +52,20 @@ const { createApp } = Vue;
                         'img/05.webp',
                     ],
                     // Seconda e terza proprietà
-                    title:
-                    text:
                 },
             }
 
+        },
+        methods: {
+            // metodo di navigazione immagine successiva
+            nextImage() {
+                // Incrementa indice posizione
+                this.activeImage++;
+                // poi valuta se siamo oltre come indice allora torna alla prima posizione
+                if(this.activeImage > this.slides.images.lenght - 1){
+                    this.activeImage = 0;
+                }
+            }
         }
-    }).mount('#miapp')
+    }).mount('#app')
 
